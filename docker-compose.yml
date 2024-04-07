@@ -1,0 +1,11 @@
+services:
+  web:
+    image: "nginx:latest"
+    ports:
+      - "80:80"
+  database:
+    image: "postgres:latest"
+    environment:
+      - DATABASE_NAME=postgres
+      - DATABASE_USERNAME=postgres
+      - POSTGRES_PASSWORD=secret
